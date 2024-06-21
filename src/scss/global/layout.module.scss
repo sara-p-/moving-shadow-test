@@ -1,0 +1,44 @@
+@use './variables.module.scss' as *;
+@use './mixins.module.scss' as *;
+@use 'sass:math';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: var(--site-width-xl);
+  margin: auto;
+  padding: 0 var(--spacing-l);
+}
+
+.visually-hidden,
+.visually-hide-label,
+.visually-hide-text {
+  position: absolute;
+  right: 999999999px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}

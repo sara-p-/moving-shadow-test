@@ -1,0 +1,113 @@
+@use './variables.module.scss' as *;
+@use 'sass:math';
+// Breakpoints
+@mixin mobile-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin big-desktop-up {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+// Styleguide
+@mixin heading-style(
+  $size: var(--h1-font-size),
+  $weight: var(--heading-font-weight),
+  $height: var(--heading-line-height)
+) {
+  font-family: var(--heading-font-family);
+  font-weight: $weight;
+  line-height: $height;
+  font-size: $size;
+  margin-bottom: var(--spacing-16);
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+// Utility
+
+@mixin image-cover() {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  img {
+    display: none;
+  }
+}
+
+@mixin clear-list() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($justify: center, $align: center, $dir: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin display-value($var) {
+  &:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: $var;
+  }
+}
+
+@mixin focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+@mixin fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin absolute {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@mixin aspect-ratio($ratio1: 16, $ratio2: 9) {
+  &:before {
+    content: '';
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: math.div(100%, math.div($ratio1, $ratio2));
+  }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

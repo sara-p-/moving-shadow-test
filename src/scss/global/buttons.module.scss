@@ -1,0 +1,47 @@
+@use './variables.module.scss' as *;
+@use './mixins.module.scss' as *;
+
+.buttons {
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  padding: 0;
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  transition: all var(--base-duration) var(--base-timing);
+  font-weight: 500;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 17px 8px 15px;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  &:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+}

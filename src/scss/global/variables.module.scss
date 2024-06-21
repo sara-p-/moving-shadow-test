@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use 'sass:color';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root,
+[data-theme='default'] {
+  // Colors
+  --white: #ffffff;
+  --black: #1f1f1f;
+  --black-light: #404040;
+  --orange-red-crayola: hsla(0, 100%, 68%, 1);
+  --slate-blue: hsla(240, 50%, 56%, 1);
+
+  // Fonts
+  --base-font-family: 'Inter', sans-serif;
+  --heading-font-family: 'Inter', sans-serif;
+
+  // Font Size
+  --base-font-size: 16px;
+  --tablet-font-size: 14px;
+  --mobile-font-size: 12px;
+
+  --h1-font-size: 4rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.3rem;
+  --h6-font-size: 1rem;
+
+  // Line Height
+  --base-line-height: 1.3;
+  --heading-line-height: 1;
+
+  // Font Weight
+  --base-font-weight: 400;
+  --heading-font-weight: 700;
+
+  // Site Width
+  --site-width-xl: 1905px;
+  --site-width-l: 1400px;
+  --site-width-m: 1040px;
+  --site-width-s: 840px;
+
+  // Spacing
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+  --spacing-120: 7.5rem;
+
+  // Border
+  --base-border: 5px solid var(--primary-color);
+
+  // Box Shadow
+  --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+  --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+
+  // Text Shadow
+  --text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
+  --text-shadow--hard: -5px 5px 0px #363636;
+
+  // Transitions
+  --base-duration: 300ms;
+  --base-duration-long: 1s;
+  --base-timing: ease-in-out;
+
+  // Theme
+  --primary-color: var(--black-light);
+  --secondary-color: var(--white);
+  --accent-color: var(--orange-red-crayola);
+}
+
+[data-theme='alt'] {
+}
+
+// Layout Modifier Sizes (see layout.module.scss)
+$sizes: 8px, 16px, 24px, 32px, 48px, 64px, 120px, 160px, 200px;
+$positions: top, right, bottom, left;

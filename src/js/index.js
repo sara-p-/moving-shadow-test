@@ -1,1 +1,3 @@
-console.log('Hello World')
+import mouseMovement from './modules/mouse-movement'
+
+mouseMovement()

@@ -8,8 +8,8 @@
   --white: #ffffff;
   --black: #1f1f1f;
   --black-light: #404040;
-  --orange-red-crayola: hsla(0, 100%, 68%, 1);
-  --slate-blue: hsla(240, 50%, 56%, 1);
+  --red: hsla(0, 100%, 68%, 1);
+  --blue: hsla(240, 50%, 56%, 1);
 
   // Fonts
   --base-font-family: 'Inter', sans-serif;
@@ -51,10 +51,10 @@
   --spacing-120: 7.5rem;
 
   // Border
-  --base-border: 5px solid var(--primary-color);
+  --base-border: 5px solid var(--red);
 
   // Box Shadow
-  --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+  --box-shadow: 0px 0px 3px 10px rgba(0, 0, 0, 0.5);
   --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
 
   // Text Shadow
@@ -69,7 +69,7 @@
   // Theme
   --primary-color: var(--black-light);
   --secondary-color: var(--white);
-  --accent-color: var(--orange-red-crayola);
+  --accent-color: var(--red);
 }
 
 [data-theme='alt'] {

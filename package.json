@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "Moving Shadow Test",
   "source": "src/html/index.html",
   "scripts": {
     "start": "parcel",

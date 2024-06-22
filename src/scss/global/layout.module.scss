@@ -24,6 +24,13 @@ body {
 .section {
   position: relative;
   width: 100%;
+  &--fullscreen {
+    width: 100%;
+    height: 100vh;
+    .wrapper {
+      height: 100vh;
+    }
+  }
 }
 
 .wrapper {
@@ -31,6 +38,13 @@ body {
   max-width: var(--site-width-xl);
   margin: auto;
   padding: 0 var(--spacing-l);
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .visually-hidden,
